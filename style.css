@@ -540,6 +540,7 @@ textarea {
 
   .modal {
     padding: 0;
+    padding-top: 80px;
   }
 
   .modal-content {
@@ -664,7 +665,7 @@ textarea {
 
 @media (max-width: 768px) {
 
-  /* Üst iletişim alanı alt alta */
+  
   .top-cont {
     display: flex;
     flex-direction: column;
@@ -741,6 +742,6 @@ textarea {
     width: 100%;
     height: auto;
   }
-
-
-
+ .hak-line{
+  display: none; 
+ }
