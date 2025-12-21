@@ -15,24 +15,45 @@
             <a href="menu.html">Menü</a>
             <a href="hakkımızda.html">Hakkımızda</a>
             <a href="iletişim.html">İletişim</a>
-            <button class="buton">Rezervasyon Yap</button>
+            <button class="buton" onclick="openModal()">Rezervasyon Yap</button>
         </nav>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
     </header>
     
    <main class="main">
    
   <section class="iletisim">
     <div class="container">
-        <h3 class="baslik">İletişim Bilgilerimiz</h3>
-       <h4>Etiler Şubemiz</h4>
+         <h3 class="baslik">İletişim Bilgilerimiz</h3>
+         <br>
+           <h4>Etiler Şubemiz</h4>
+        <div class="top-cont">
+       <div class="left-cont">
         <p> 📞Telefon: 0212 034 34 34</p>
+        <br>
         <p> ✉️E-Mail Adresi:blendz@gmail.com</p>
+        </div>
+        <div class="center-cont"></div>
+        <div class="right-cont">
+          <ul>Çalışma Saatlerimiz:
+            <li>⏰ Pazartesi: 09:00 - 01:00</li>
+            <li>⏰ Salı: 09:00 - 01:00</li>
+            <li>⏰ Çarşamba: 09:00 - 01:00</li>
+            <li>⏰ Perşembe: 09:00 - 01:00</li>
+            <li>⏰ Cuma: 09:00 - 01:00</li>
+            <li>⏰ Cumartesi: 09:00 - 01:00</li>
+            <li>⏰ Pazar: 09:00 - 01:00</li>
+          </ul>
+         </div>
+        </div>
+        <div class="alt-cont">
         <p> 📍Adres: </p>
         <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d307.1242149522315!2d29.033233929876275!3d41.08009899663289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1snusret!5e0!3m2!1str!2str!4v1766062791620!5m2!1str!2str" 
             loading="lazy"
             frameborder="no-referrer-when-downgrade">
         </iframe>
+        </div>
         </div>
     </div>
   </section>
@@ -50,5 +71,47 @@
 
        </div>
     </footer>
+     <div class="modal" id="reservationModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">✖</span>
+
+            <h2>Rezervasyon yap</h2>
+          <form id="reservationForm">
+            <div class="form-grid">
+
+                <div class="form-left">
+                    <input type="text" placeholder="Ad Soyad" pattern="[A-Za-zçÇğĞıİöÖşŞüÜ\s]+" title="Sadece Harf giriniz"  required>
+                    <input type="tel" placeholder="Telefon" inputmode="numeric" pattern="[0-9]{10,11}"   title="Sadece Rakam Giriniz"  required>
+                    <input type="email" placeholder="E-posta" required>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="form-right">
+                    <input type="time" min="09:00" max="23:59" required>
+                    <input type="date" id="dateInput"  required>
+                    <select>
+                        <option value="" >Kişi Sayısı</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5+</option>
+                    </select>
+                </div>
+            </div>
+
+            <textarea placeholder="Not/Özel İstek(isteğinize bağlı)"></textarea>
+
+            <div class="message">Rezervasyonunuz Başarıyla Alındı.</div>
+ 
+            <button class="submit-btn" type="submit">Rezervasyon Yap</button>
+          </form>
+
+        </div>
+        
+    </div>
+
+ <script src="menu.js"></script>
 </body>
 </html>

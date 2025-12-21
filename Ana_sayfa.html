@@ -15,24 +15,21 @@
             <a href="menu.html">Menü</a>
             <a href="hakkımızda.html">Hakkımızda</a>
             <a href="iletişim.html">İletişim</a>
-            <button class="buton">Rezervasyon Yap</button>
+            <button class="buton" onclick="openModal()">Rezervasyon Yap</button>
         </nav>
+          <div class="hamburger" onclick="toggleMenu()">☰</div>
     </header>
     <main class="main">
         <section class="ana-section">
             <div class="ana-hero">
                 <h1>BLENDZ</h1>
-                <p>Ettiler'de Lezzetin durağı</p>
+                <p>Lezzetin Modern Hali</p>
                 <a href="menu.html" class="ana-btn">MENÜ</a>
             </div>
         </section>
         <section>
 
         </section>
-      
-        
-
-
     </main>
    
     <footer class="footer">
@@ -47,7 +44,51 @@
 
        </div>
     </footer>
+    <!--rezervasyon pupup-->
 
  
+
+    <div class="modal" id="reservationModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">✖</span>
+
+            <h2>Rezervasyon yap</h2>
+          <form id="reservationForm">
+            <div class="form-grid">
+
+                <div class="form-left">
+                    <input type="text" placeholder="Ad Soyad" pattern="[A-Za-zçÇğĞıİöÖşŞüÜ\s]+" title="Sadece Harf giriniz"  required>
+                    <input type="tel" placeholder="Telefon" inputmode="numeric" pattern="[0-9]{10,11}"   title="Sadece Rakam Giriniz"  required>
+                    <input type="email" placeholder="E-posta" required>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="form-right">
+                    <input type="time" min="09:00" max="23:59" required>
+                    <input type="date" id="dateInput"  required>
+                    <select>
+                        <option value="" >Kişi Sayısı</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5+</option>
+                    </select>
+                </div>
+            </div>
+
+            <textarea placeholder="Not/Özel İstek(isteğinize bağlı)"></textarea>
+
+            <div class="message">Rezervasyonunuz Başarıyla Alındı.</div>
+ 
+            <button class="submit-btn" type="submit">Rezervasyon Yap</button>
+          </form>
+
+        </div>
+        
+    </div>
+
+ <script src="menu.js"></script>
 </body>
 </html>

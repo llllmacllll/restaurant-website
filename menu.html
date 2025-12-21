@@ -15,11 +15,203 @@
             <a href="menu.html">Menü</a>
             <a href="hakkımızda.html">Hakkımızda</a>
             <a href="iletişim.html">İletişim</a>
-            <button class="buton">Rezervasyon Yap</button>
+            <button class="buton" onclick="openModal()">Rezervasyon Yap</button>
         </nav>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
     </header>
     <main class="main">
-        <h1>denenme</h1>
+
+        <button class="back-btn" onclick="backToCategories()">Geri Dön</button>
+        <!--kategoriler-->
+        <section class="menu-cat">
+            <div class="cat-card" onclick="showMenu('menu-yemek')">
+                <img src="yemek menü fotoğrafları/Steak cooking fire.jpeg" alt="ana yemekler">
+                <h4>ANA YEMEKLER</h4>
+            </div>
+
+            <div class="cat-card" onclick="showMenu('menu-food')">
+                <img src="yemek menü fotoğrafları/food.jpeg" alt="fast food">
+                <h4>BURGER & STREET FOOD</h4>
+            </div>
+
+            <div class="cat-card" onclick="showMenu('menu-salata')">
+                <img src="yemek menü fotoğrafları/salata.jpeg" alt="">
+                <h4>SALATALAR</h4>
+            </div>
+
+            <div class="cat-card" onclick="showDrinks()">
+                <img src="yemek menü fotoğrafları/içecekkısmı.jpeg" alt="içecek">
+                <h4>İÇECEKLER</h4>
+            </div>
+
+            <div class="cat-card" onclick="showMenu('menu-tatli')">
+                <img src="yemek menü fotoğrafları/tatliana.jpeg" alt="tatli">
+                <h4>TATLILAR</h4>
+            </div>
+        </section>
+                         <!--ürünler kısmı-->
+        <section class="items">
+                           <!--yemek-->
+            <div class="menu-yemek menu-group">
+                <div class="item-card">
+                    <img src="yemek menü fotoğrafları/şaraplıdana.jpeg" alt="dana Bonfile">
+                    <h4>Şarap Soslu Dana Bonfile</h4>
+                    <br>
+                    <p>Kırmızı şarap sosuyla lezzetlendirilmiş yumuşak dana bonfile.</p>
+                    <br>
+                    <p>100₺</p>
+                </div>
+                <div class="item-card">
+                    <img src="yemek menü fotoğrafları/köfte.jpeg" alt="kasap Köfte">
+                    <h4>Izgara Kasap Köfte</h4>
+                    <br>
+                    <p>Günlük çekilmiş dana etinden hazırlanan kasap köfte, ızgarada pişirilir.</p>
+                    <br>
+                    <p>100₺</p>
+                </div>
+                <div class="item-card">
+                    <img src="yemek menü fotoğrafları/kuzu.jpeg" alt="kuzu pirzola">
+                    <h4>Karamelize Patatesli Kuzu Pirzola</h4>
+                    <br>
+                    <p>Özenle marine edilmiş kuzu pirzola, karamelize patates eşliğinde servis edilir.</p>
+                    <br>
+                    <p>100₺</p>
+                </div>
+            </div>
+                               <!--food-->
+                <div class="menu-food menu-group">
+                    <div class="item-card">
+                        <img src="yemek menü fotoğrafları/doble melt.jpeg" alt="burger1">
+                        <h4>Stack Burger</h4>
+                        <br>
+                        <p>Çift kat sulu köfte,eriyen cheddar,taptaze yeşillikler ve yumuşak briyoş ekmeğiyle doyurucu bir burger deneyimi.</p>
+                        <br>
+                        <p>100₺</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="yemek menü fotoğrafları/burger2.webp" alt="burger2">
+                        <h4>House Burger</h4>
+                        <br>
+                        <p>Karamilize Soğan,cheddar peyniri ve Çıtır patates.</p>
+                        <p>100₺</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="yemek menü fotoğrafları/Pizza.jpeg" alt="pizza1">
+                        <h4>Pizza</h4>
+                        <br>
+                        <p>Odun ateşi lezzetini hissetiren bol mozzarella,taze fesleğen ve özel domates sosuyla hazırlanan klasik italyan pizza. </p>
+                        <br>
+                        <p>100₺</p>
+                    </div>
+                        <div class="item-card">
+                            <img src="yemek menü fotoğrafları/patates.jpeg" alt="patataes">
+                            <h4>Patates Kızartması</h4>
+                            <br>
+                            <p>Özel sosola hazırlanmıştır.</p>
+                            <br>
+                            <p>100₺</p>
+                        </div>
+                </div>
+                               <!--salata-->
+                        <div class="menu-salata menu-group">
+                            <div class="item-card">
+                                <img src="yemek menü fotoğrafları/tavuklu sezar salata.jpeg" alt="sezar salata">
+                                <h4>Tavuklu Sezar Salata.</h4>
+                                <br>
+                                <p>100₺</p>
+                            </div>
+                                <div class="item-card">
+                                    <img src="yemek menü fotoğrafları/avakadolu salata.jpeg" alt="akdeniz salata">
+                                    <h4>Avokadolu Akdeniz Salata</h4>
+                                    <br>
+                                    <p>100₺</p>
+                                </div>
+                        </div>
+
+                        <!--içecek grup-->
+                <div class="drinks-group">
+                    <div class="sub-card" onclick="showMenu('menu-hot-drink')">
+                        <img src="yemek menü fotoğrafları/sıcakcay-min.jpg" alt="sıcak içecekelr">
+                        <h4>Sıcak İçecekler</h4>
+                    </div>
+                    <div class="sub-card" onclick="showMenu('menu-cold-drink')">
+                        <img src="yemek menü fotoğrafları/coldd.jpeg" alt="Soğuk içecekler">
+                        <h4>Soğuk İÇecekler</h4>
+                    </div>
+                </div>
+
+                           <!--sıcak içecek-->
+                        <div class="menu-hot-drink menu-group">
+                            <div class="item-card">
+                                <img src="yemek menü fotoğrafları/cay.jpeg" alt="çay">
+                                <h4>Çay</h4>
+                                <br>
+                                <p>100₺</p>
+                            </div>
+                            <div class="item-card">
+                                <img src="yemek menü fotoğrafları/trkahve.jpeg" alt="Türk Kahvesi">
+                                <h4>Türk Kahvesi</h4>
+                                <br>
+                                <p>100₺</p>
+                            </div>
+                            <div class="item-card">
+                                <img src="yemek menü fotoğrafları/Salep içeceği.jpeg" alt="Salep">
+                                <h4>Salep</h4>
+                                <br>
+                                <p>100₺</p>
+                            </div>
+                        </div>
+                          <!--soğuk içecek-->
+             <div class="menu-cold-drink menu-group">
+               <div class="item-card">
+                <img src="yemek menü fotoğrafları/kola.jpeg" alt="Kola">
+                <h4>Kola</h4>
+                <br>
+                <p>100₺</p>
+               </div>
+               <div class="item-card">
+                <img src="yemek menü fotoğrafları/ice tea.jpeg" alt="İce tea">
+                <h4>Soğuk Çay</h4>
+                <br>
+                <p>100₺</p>
+               </div>
+               <div class="item-card">
+                <img src="yemek menü fotoğrafları/beypazarı.jpeg" alt="Sade soda">
+                <h4>Maden Suyu</h4>
+                <br>
+                <p>100₺</p>
+               </div>
+               <div class="item-card">
+                <img src="yemek menü fotoğrafları/limonata.jpeg" alt="Limonata">
+                <h4>limonata</h4>
+                <br>
+                <p>100₺</p>
+               </div>
+             </div>
+             
+                         <!--tatlılar-->
+            <div class="menu-tatli menu-group">
+                <div class="item-card">
+                    <img src="yemek menü fotoğrafları/san sabastian.jpeg" alt="sen sebastian">
+                    <h4>sen sebastian</h4>
+                    <br>
+                    <p>100₺</p>
+                </div>
+                <div class="item-card">
+                    <img src="yemek menü fotoğrafları/chess.jpeg" alt="cheascake">
+                    <h4>cheas</h4>
+                    <br>
+                    <p>100₺</p>
+                </div>
+                <div class="item-card">
+                    <img src="yemek menü fotoğrafları/Turkish Trilece.jpeg" alt="traliçe">
+                    <h4>Traliçe</h4>
+                    <br>
+                    <p>100₺</p>
+                </div>
+            </div>         
+    </section>
+
 
     </main>
      <footer class="footer">
@@ -31,8 +223,48 @@
         </div>
         <Div class="footer-center">|</Div>
         <div class="footer-right">© 2025 Tüm Hakları Saklıdır</div>
-
        </div>
     </footer>
+     <div class="modal" id="reservationModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">✖</span>
+
+            <h2>Rezervasyon yap</h2>
+          <form id="reservationForm">
+            <div class="form-grid">
+
+                <div class="form-left">
+                    <input type="text" placeholder="Ad Soyad" pattern="[A-Za-zçÇğĞıİöÖşŞüÜ\s]+" title="Sadece Harf giriniz"  required>
+                    <input type="tel" placeholder="Telefon" inputmode="numeric" pattern="[0-9]{10,11}"   title="Sadece Rakam Giriniz"  required>
+                    <input type="email" placeholder="E-posta" required>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="form-right">
+                    <input type="time" min="09:00" max="23:59" required>
+                    <input type="date" id="dateInput"  required>
+                    <select>
+                        <option value="" >Kişi Sayısı</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5+</option>
+                    </select>
+                </div>
+            </div>
+
+            <textarea placeholder="Not/Özel İstek(isteğinize bağlı)"></textarea>
+
+            <div class="message">Rezervasyonunuz Başarıyla Alındı.</div>
+ 
+            <button class="submit-btn" type="submit">Rezervasyon Yap</button>
+          </form>
+
+        </div>
+        
+    </div>
+ <script src="menu.js"></script>
 </body>
 </html>
