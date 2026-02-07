@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Patrick Hand', cursive;
 }
 html, body {
   height: 100%;
@@ -9,8 +10,7 @@ html, body {
   padding: 0;
 }
 body {
-    font-family: Arial, sans-serif 'Inter';
-    display: flex;
+  display: flex;
   flex-direction: column;
   background-color: #F6F0D7;
   padding-top: 90px;
@@ -116,79 +116,77 @@ body {
 .iletisim {
   min-height: 80vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start; 
   margin: 40px;
-
 }
-.container {
- background-color: #F4F4F2;
-  width: 1000px;
-  padding: 40px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+.baslik{
+  align-items: center;
+}
+/*kutular*/
+.cont{
+  width: 1200px;
+  height: 1000px;
+  background-color: #9CAB84;
+  margin: 30px;
+  border-radius: 16px;
+  flex-direction: column;
+  display: flex;
+  
+}
+.ust-cont{
+  background-color: #F6F0D7;
+  border-radius: 14px;
+  width: 1176px;
+  height: 400px;
+  position: absolute;
+  margin-left: 12px;
+  margin-top: 12px;
+  align-items: center;
   text-align: center;
-  min-height: auto;
+  font-size: 30px;
+  display: flex;
+  flex-direction: space-around;
+  justify-content: center;
+  gap: 90px;
+}
+.ust-cont .left,
+.ust-cont .right{
   display: flex;
   flex-direction: column;
-  gap: 19px;
-  border-radius: 12px;
-  position: relative;
-  margin: 0 auto;   
+  gap: 10px;
+  margin-left: 30px;
 }
-
-.top-cont .right-cont ul{
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-  list-style-position: inside;
-}
-
-
-.top-cont{
-  display: flex;
-  align-items: stretch;
-  padding: 30px;
-  text-align: center;
-}
-.top-cont, h4{
-  font-size: 30px;
-}
-.left-cont,
-.right-cont{
-  width: 40%;
-  font-size: 18px;
-  margin: 20px;
-}
-.left-cont, p{
-  margin-top: 32px;
-}
-.center-cont{
-   width: 3px;
+.line{
   background-color: #9CAB84;
-  margin-left: 80px;
-  border-radius: 4px;
+  width: 3px;
+  height: 300px;
+  border-radius: 6px;
+  margin-left: 70px;
 }
 
-.map {
-  margin-top: 5px;
-  border-radius: 15px;
-  overflow: hidden; 
-}
-
-/* Harita iframe */
-.map iframe {
-  width: 100%;
-  height: 380px;  
-  border: 0;
-}
-.baslik {
-  text-align: center;
-  font-size: 40px;
-  padding-bottom: 25px;
-}
 .alt-cont{
+  margin-top: 420px;
+  width: 1176px;
+  height: 570px;
+  background-color: #F6F0D7;
+  border-radius: 14px;
   text-align: center;
+  margin-left: 12px;
+  font-size: 22px;
 }
+.harita{
+  width: 1160px;
+  height: 530px;
+  border-radius: 14px;
+}
+.ilt-son{
+  font-size: 25px;
+}
+
+
+
 
 /*hakkımızda*/
 
